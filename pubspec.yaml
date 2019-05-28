@@ -1,6 +1,6 @@
 name: numbers_to_words
-description: Converts number to words and supports multiple locales.
-version: 0.1.0
+description: Converts number to words and supports multiple locales, for instance English and Dari.
+version: 0.1.1
 author: Matiullah Karimi <matiullah.karimi@gmail.com>
 homepage: https://github.com/matiullah-karimi/number_to_words
 

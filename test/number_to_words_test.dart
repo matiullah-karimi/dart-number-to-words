@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:number_to_words/number_to_words.dart';
+import 'package:numbers_to_words/numbers_to_words.dart';
 
 void main() {
   test('it converts the number to Dari words', () {

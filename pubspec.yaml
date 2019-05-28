@@ -1,0 +1,13 @@
+name: number_to_words
+description: Converts number to words and supports multiple locales.
+version: 0.1.0
+author: Matiullah Karimi <matiullah.karimi@gmail.com>
+homepage: https://github.com/matiullah-karimi/number_to_words
+
+environment:
+    sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+
+dev_dependencies:
+    test: ^1.6.3

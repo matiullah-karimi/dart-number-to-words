@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the convert method from the NumberToWords class, for the Dart programming language.">
+  <title>convert method - NumberToWords class - numbers_to_words library - Dart API</title>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../../static-assets/github.css">
+  <link rel="stylesheet" href="../../static-assets/styles.css">
+  <link rel="icon" href="../../static-assets/favicon.png">
+
+</head>
+
+<body data-base-href="../../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">numbers_to_words</a></li>
+    <li><a href="../../numbers_to_words/numbers_to_words-library.html">numbers_to_words</a></li>
+    <li><a href="../../numbers_to_words/NumberToWords-class.html">NumberToWords</a></li>
+    <li class="self-crumb">convert method</li>
+  </ol>
+  <div class="self-name">convert</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="../../index.html">numbers_to_words</a></li>
+      <li><a href="../../numbers_to_words/numbers_to_words-library.html">numbers_to_words</a></li>
+      <li><a href="../../numbers_to_words/NumberToWords-class.html">NumberToWords</a></li>
+      <li class="self-crumb">convert method</li>
+    </ol>
+    
+    <h5>NumberToWords class</h5>
+    <ol>
+
+    <li class="section-title"><a href="../../numbers_to_words/NumberToWords-class.html#constructors">Constructors</a></li>
+    <li><a href="../../numbers_to_words/NumberToWords/NumberToWords.html">NumberToWords</a></li>
+
+
+    <li class="section-title inherited">
+      <a href="../../numbers_to_words/NumberToWords-class.html#instance-properties">Properties</a>
+    </li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.3/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.3/dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+    <li class="section-title inherited"><a href="../../numbers_to_words/NumberToWords-class.html#instance-methods">Methods</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.3/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.3/dart-core/Object/toString.html">toString</a></li>
+
+    <li class="section-title inherited"><a href="../../numbers_to_words/NumberToWords-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.12.3/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+    <li class="section-title"><a href="../../numbers_to_words/NumberToWords-class.html#static-methods">Static methods</a></li>
+    <li><a href="../../numbers_to_words/NumberToWords/convert.html">convert</a></li>
+    <li><a href="../../numbers_to_words/NumberToWords/isNumeric.html">isNumeric</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div><h1><span class="kind-method">convert</span> method     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      <span class="returntype"><a href="https://api.dart.dev/stable/2.12.3/dart-core/String-class.html">String</a></span>
+            <span class="name ">convert</span>
+(<wbr><ol class="parameter-list"><li><span class="parameter" id="convert-param-number"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">number</span>, </span></li>
+<li><span class="parameter" id="convert-param-locale"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">locale</span></span></li>
+</ol>)
+      
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">static String convert(int number, String locale) {
+  &#47;&#47; 0 to 999 999 999 999
+  if (number == 0) {
+    return getZero(locale);
+  }
+
+  String snumber = number.toString().padLeft(12, &quot;0&quot;);
+  &#47;&#47; XXXnnnnnnnnn
+  int billions = int.parse(snumber.substring(0, 3));
+  &#47;&#47; nnnXXXnnnnnn
+  int millions = int.parse(snumber.substring(3, 6));
+  &#47;&#47; nnnnnnXXXnnn
+  int hundredThousands = int.parse(snumber.substring(6, 9));
+  &#47;&#47; nnnnnnnnnXXX
+  int thousands = int.parse(snumber.substring(9, 12));
+
+  String tradBillions = _getBillions(billions, locale);
+  String result = tradBillions;
+
+  String tradMillions = _getMillions(millions, locale);
+  result = result + tradMillions;
+
+  String tradHundredThousands = _getThousands(hundredThousands, locale);
+  result = result + tradHundredThousands;
+
+  String tradThousand;
+  tradThousand = _convertLessThanOneThousand(thousands, locale);
+  result = result + tradThousand;
+
+  &#47;&#47; remove extra spaces!
+  return result.replaceAll(&quot;^\\s+&quot;, &quot;&quot;).replaceAll(&quot;\\b\\s{2,}\\b&quot;, &quot; &quot;);
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    numbers_to_words
+      0.2.0
+  </span>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../../static-assets/typeahead.bundle.min.js"></script>
+<script src="../../static-assets/highlight.pack.js"></script>
+<script src="../../static-assets/script.js"></script>
+
+
+</body>
+
+</html>

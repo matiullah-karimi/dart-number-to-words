@@ -5,9 +5,7 @@ author: Matiullah Karimi <matiullah.karimi@gmail.com>
 homepage: https://github.com/matiullah-karimi/dart-number-to-words
 
 environment:
-    sdk: ">=2.1.0 <3.0.0"
-
-dependencies:
+    sdk: ">=2.12.0 <3.0.0"
 
 dev_dependencies:
     test: ^1.6.3
